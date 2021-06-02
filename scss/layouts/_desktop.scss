@@ -1,0 +1,228 @@
+@use '../base/' as *;
+
+@media screen and (min-width: 1200px) {
+  // Base styles
+  .btn {
+    &-try {
+      padding: 7px 27px;
+      font-size: 14px;
+    }
+
+    &-main {
+      padding: 25px 100px;
+      background-color: $pink;
+      color: #fff;
+      box-shadow: 0 5px 10px hsl(0, 0, 75);
+      font-size: 18px;
+      font-weight: 600;
+    }
+  }
+
+  .alert {
+    top: 80px;
+    left: 0px;
+  }
+
+  // Background curves
+  .bg {
+    width: 100vw;
+    position: relative;
+
+    &-top {
+      top: 1px;
+
+      &-section-1 {
+        height: 11.46vw;
+        margin-top: 200px;
+        background: url(../images/bg-section-top-desktop-1.svg) no-repeat top
+          center / 100vw;
+      }
+
+      &-section-2 {
+        height: 10.83vw;
+        margin-top: 100px;
+        background: url(../images/bg-section-top-desktop-2.svg) no-repeat top
+          center / 100vw;
+      }
+
+      &-footer {
+        height: 15vw;
+        background: url(../images/bg-footer-top-desktop.svg) no-repeat bottom
+          center / 100vw;
+      }
+    }
+
+    &-bottom {
+      top: -1px;
+
+      &-section-1 {
+        height: 9.65vw;
+        background: url(../images/bg-section-bottom-desktop-1.svg) no-repeat top
+          center / 100vw;
+      }
+
+      &-section-2 {
+        height: 9.65vw;
+        background: url(../images/bg-section-bottom-desktop-2.svg) no-repeat top
+          center / 100vw;
+      }
+    }
+  }
+
+  // Navigation bar
+  nav {
+    padding: 55px;
+
+    img {
+      width: 220px;
+    }
+  }
+
+  // Intro
+  .intro {
+    max-width: 80vw;
+    margin: 50px auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+      font-size: 47px;
+      max-width: 80vw;
+      margin: auto;
+    }
+
+    p {
+      font-size: 18px;
+      max-width: 550px;
+    }
+  }
+
+  // Stats
+  .stats {
+    margin-top: 150px;
+
+    .communities,
+    .messages {
+      transform: scale(1.5);
+      margin-top: 0;
+    }
+  }
+
+  // Stories
+  .story-1,
+  .story-2,
+  .story-3 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 calc((100vw - 1200px) / 2);
+    text-align: left;
+
+    h2 {
+      font-size: 36px;
+      margin: 0;
+    }
+
+    .content {
+      max-width: 550px;
+    }
+
+    .illustration {
+      max-width: 550px;
+      padding-right: 50px;
+    }
+  }
+
+  .story-1,
+  .story-3 {
+    padding-top: 50px;
+
+    .illustration {
+      order: 2;
+    }
+  }
+
+  .story-2 {
+    margin-top: 200px;
+  }
+
+  // Get started
+  .get-started {
+    margin: 150px 0 100px 0;
+
+    h2 {
+      font-size: 38px;
+    }
+  }
+
+  // Footer
+  footer {
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    padding-top: 100px;
+
+    h3 {
+      font-size: 24px;
+    }
+
+    p {
+      max-width: 320px;
+      margin: 20px 0 0 0;
+    }
+
+    .newsletter,
+    .info,
+    .socials {
+      padding: 0;
+    }
+
+    .info {
+      order: 1;
+      width: calc(55% - 7.2vw);
+      margin: 0 0 0 7.2vw;
+
+      .logo-footer {
+        width: 230px;
+      }
+    }
+
+    .newsletter {
+      order: 2;
+      width: 45%;
+      margin-top: 0;
+
+      input {
+        width: 310px;
+        margin-right: 40px;
+      }
+
+      form {
+        flex-direction: row;
+        margin-top: 15px;
+      }
+    }
+
+    .socials {
+      width: 100%;
+      margin: 80px 0 7.2vw 7.2vw;
+
+      a {
+        margin-right: 20px;
+      }
+
+      i {
+        font-size: 35px;
+      }
+    }
+
+    .footer-attribution {
+      width: 100%;
+
+      p {
+        max-width: none;
+      }
+    }
+  }
+}

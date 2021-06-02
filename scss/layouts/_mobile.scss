@@ -1,0 +1,298 @@
+@use '../base/' as *;
+
+// Background curves
+.bg {
+  width: 100vw;
+  position: relative;
+
+  &-top {
+    top: 1px;
+
+    &-section-1 {
+      height: 30vw;
+      margin-top: 20px;
+      background: url(../images/bg-section-top-mobile-1.svg) no-repeat top
+        center / 100vw;
+    }
+
+    &-section-2 {
+      height: 27vw;
+      margin-top: 100px;
+      background: url(../images/bg-section-top-mobile-2.svg) no-repeat top
+        center / 100vw;
+    }
+
+    &-footer {
+      height: 15vw;
+      background: url(../images/bg-footer-top-mobile.svg) no-repeat bottom
+        center / 100vw;
+    }
+  }
+
+  &-bottom {
+    top: -1px;
+
+    &-section-1 {
+      height: 14vw;
+      background: url(../images/bg-section-bottom-mobile-1.svg) no-repeat top
+        center / 100vw;
+    }
+
+    &-section-2 {
+      height: 27vw;
+      background: url(../images/bg-section-bottom-mobile-2.svg) no-repeat top
+        center / 100vw;
+    }
+  }
+}
+
+// Layout
+
+// Navigation bar
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px;
+
+  img {
+    width: 100px;
+  }
+}
+
+// Intro
+.intro {
+  margin-top: 90px;
+  padding: 0 30px;
+
+  h1 {
+    font-size: 24px;
+  }
+
+  .btn {
+    margin-top: 50px;
+  }
+
+  img {
+    margin-top: 100px;
+  }
+}
+
+// Stats
+.stats {
+  max-width: 160px;
+  margin: auto;
+}
+
+.communities,
+.messages {
+  display: flex;
+  flex-direction: column;
+
+  img {
+    width: 30px;
+    margin-left: 3px;
+  }
+
+  .quantity {
+    font-size: 60px;
+    font-weight: 700;
+  }
+
+  .subtext {
+    opacity: 0.7;
+    font-size: 15px;
+  }
+}
+
+.communities {
+  margin-top: 120px;
+}
+
+.messages {
+  margin: 100px 0 0 -7px;
+  transform: scale(0.9);
+
+  img {
+    width: 25px;
+  }
+}
+
+// Stories
+.story-1,
+.story-2,
+.story-3 {
+  width: 100%;
+  position: relative;
+
+  img {
+    width: 70vw;
+  }
+
+  h2,
+  p {
+    padding: 0 30px;
+  }
+
+  h2 {
+    font-size: 20px;
+    margin-top: 70px;
+  }
+
+  p {
+    margin-top: 15px;
+  }
+}
+
+.story-1,
+.story-3 {
+  background-color: $very-pale-blue;
+}
+
+.story-1 {
+  padding: 80px 0 70px 0;
+}
+
+.story-2 {
+  margin-top: 120px;
+}
+
+.story-3 {
+  padding: 20px 0 100px 0;
+}
+
+// Get started
+.get-started {
+  margin: 70px 0 230px 0;
+
+  h2 {
+    max-width: 80vw;
+    margin: auto;
+  }
+
+  .btn {
+    margin-top: 40px;
+  }
+}
+
+// Footer
+footer {
+  background-color: $very-dark-cyan;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+
+  p,
+  span {
+    line-height: 1.8;
+    font-size: 14.1px;
+  }
+
+  .newsletter,
+  .info,
+  .socials {
+    padding: 0 30px;
+  }
+
+  .info,
+  .socials {
+    order: 2;
+  }
+
+  .phone,
+  .email {
+    display: flex;
+    align-items: center;
+
+    span {
+      margin-left: 20px;
+    }
+  }
+
+  .phone {
+    margin-top: 40px;
+  }
+
+  .email {
+    margin-top: 15px;
+  }
+
+  .info {
+    margin-top: 100px;
+  }
+
+  .newsletter {
+    margin-top: 60px;
+
+    h3 {
+      text-transform: uppercase;
+      font-family: "Open Sans", sans-serif;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+
+    input {
+      width: 100%;
+      height: 45px;
+      margin-top: 30px;
+      padding-left: 20px;
+      border-radius: 5px;
+      border: none;
+      outline: none;
+    }
+
+    form {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+  }
+
+  .logo-footer {
+    width: 200px;
+    filter: invert(94%) sepia(73%) saturate(3%) hue-rotate(104deg)
+      brightness(200%) contrast(100%);
+  }
+
+  .socials {
+    margin: 40px 0;
+
+    a {
+      text-decoration: none;
+      color: #fff;
+      margin-right: 15px;
+
+      &:visited {
+        color: #fff;
+      }
+
+      &:hover {
+        color: #02c5ff;
+      }
+    }
+
+    i {
+      font-size: 25px;
+    }
+  }
+}
+
+.footer-attribution {
+  order: 3;
+  height: 50px;
+  background-color: lighten($color: $very-dark-cyan, $amount: 3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  p {
+    font-size: 11px;
+    margin: 0;
+    padding: 0 30px;
+  }
+
+  a {
+    color: hsl(228, 45%, 54%);
+  }
+}

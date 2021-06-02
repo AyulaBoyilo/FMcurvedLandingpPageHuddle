@@ -1,0 +1,80 @@
+@use '../base/' as *;
+
+@media screen and (min-width: 600px) {
+  p {
+    font-size: 15px;
+    max-width: 70vw;
+    margin: 20px auto 0 auto;
+  }
+
+  // Navigation bar
+  nav {
+    padding: 40px;
+
+    img {
+      width: 120px;
+    }
+  }
+
+  // Intro
+  .intro {
+    max-width: 80vw;
+    margin: 50px auto 0 auto;
+
+    h1 {
+      font-size: 32px;
+      max-width: 50vw;
+      margin: auto;
+    }
+  }
+
+  // Stats
+  .stats {
+    max-width: 80vw;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    .messages {
+      transform: scale(1);
+      margin: 120px 0 0 0;
+    }
+  }
+
+  // Stories
+  .story-1,
+  .story-2,
+  .story-3 {
+    h2 {
+      font-size: 28px;
+    }
+  }
+
+  // Get started
+  .get-started {
+    h2 {
+      max-width: 70vw;
+      font-size: 28px;
+    }
+  }
+
+  // Footer
+  footer {
+    .newsletter,
+    .info,
+    .socials {
+      padding: 0 25vw;
+    }
+
+    .socials {
+      margin-bottom: 100px;
+    }
+
+    .footer-attribution {
+      p {
+        max-width: none;
+      }
+    }
+  }
+}
